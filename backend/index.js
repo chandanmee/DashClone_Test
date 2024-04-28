@@ -1,10 +1,13 @@
 // backend/index.js
+
+// Import necessary modules
 const express = require('express');
 const mongoose = require('mongoose');
 const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
 const User = require('./models/user');
 
+// Create an instance of Express
 const app = express();
 const PORT = 3000;
 
@@ -80,6 +83,7 @@ app.post('/login', async (req, res) => {
 
 // Other routes and middleware will go here
 
+// Start the server
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
 });
