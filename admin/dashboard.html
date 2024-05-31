@@ -12,7 +12,33 @@
   <link rel="stylesheet" href="../_res/_css/_responsive.css" />
   <link rel="stylesheet" href="../_res/_css/icons.css" />
   <link rel="stylesheet" href="../_res/_css/_extra.css" />
+  <title>ISG- Admin Dashboard</title>
+  
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- App favicon -->
+  <link rel="shortcut icon" href="../_res/_img/favicon_light.png">
+  <link rel="stylesheet" href="../_res/_css/style.css" />
+  <link rel="stylesheet" href="../_res/_css/app.css" />
+  <link rel="stylesheet" href="../_res/_css/_responsive.css" />
+  <link rel="stylesheet" href="../_res/_css/icons.css" />
+  <link rel="stylesheet" href="../_res/_css/_extra.css" />
   <title>Fusiondesk - Admin Dashboard</title>
+  <style>
+    /* Additional CSS to ensure full height and scroll */
+    .vertical-menu {
+      height: 100vh; /* Full viewport height */
+      overflow-y: auto; /* Scrollable */
+    }
+    .simplebar-content-wrapper {
+      height: 100%;
+      overflow: auto;
+    }
+  </style>
 </head>
 <!--  vertical-collapsed disabled -->
 <body data-sidebar="dark" class="sidebar-enable">
@@ -67,218 +93,133 @@
         </div>
         <div class="d-flex">
           <div class="dropdown d-inline-block user-dropdown">
-            <button id="dropdown-event-2" type="button" class="btn header-item waves-effect show" id="page-header-user-dropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-                <img class="rounded-circle header-profile-user" src="../_res/_img/user/avatar-2.jpg" alt="Header Avatar">
-                <span class="d-xl-inline-block ms-1">Chandan</span>
-                <span class="ico-down-arrow navIcon"></span>
-            </button>
-            <div class="dropdown-menu d-none dropdown-menu-end show" style="position: absolute; inset: 0px 0px auto auto; margin: 0px; transform: translate(0px, 72px);" data-popper-placement="bottom-end">
-                <!-- item-->
-                <a class="dropdown-item" href="#"><i class="ri-user-line align-middle me-1"></i> Profile</a>
-                <a class="dropdown-item" href="#"><i class="ri-wallet-2-line align-middle me-1"></i> My Wallet</a>
-                <a class="dropdown-item d-block" href="#"><span class="badge bg-success float-end mt-1">11</span><i class="ri-settings-2-line align-middle me-1"></i> Settings</a>
-                <a class="dropdown-item" href="#"><i class="ri-lock-unlock-line align-middle me-1"></i> Lock screen</a>
-                <div class="dropdown-divider"></div>
-                <a class="dropdown-item text-danger" href="#"><i class="ri-shut-down-line align-middle me-1 text-danger"></i> Logout</a>
-            </div>
+            <button id="dropdown-event-2" type="button" class="btn dropdown-toggle header-item waves-effect show" id="page-header-user-dropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+              <img class="rounded-circle header-profile-user" src="../_res/_img/user/avatar-2.jpg" alt="Header Avatar">
+              <span class="d-xl-inline-block ms-1">Chandan</span>
+              <span class="ico-down-arrow navIcon"></span>
+          </button>
+          <div id="dropdown-event-2-menu" class="dropdown-menu d-none dropdown-menu-end show" style="position: absolute; inset: 0px 0px auto auto; margin: 0px; transform: translate(0px, 72px);" data-popper-placement="bottom-end">
+              <!-- item-->
+              <a class="dropdown-item" href="#"><i class="ri-user-line align-middle me-1"></i> Profile</a>
+              <a class="dropdown-item" href="#"><i class="ri-wallet-2-line align-middle me-1"></i> My Wallet</a>
+              <a class="dropdown-item d-block" href="#"><span class="badge bg-success float-end mt-1">11</span><i class="ri-settings-2-line align-middle me-1"></i> Settings</a>
+              <a class="dropdown-item" href="#"><i class="ri-lock-unlock-line align-middle me-1"></i> Lock screen</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item text-danger" href="../index.html"><i class="ri-shut-down-line align-middle me-1 text-danger"></i> Logout</a>
+          </div>
         </div>
         </div>
       </div>
     </header>
 
     <!-- ========== Left Sidebar Start ========== -->
+    <div id="sidebar-menu">
+      <ul class="metismenu list-unstyled">
+        <li class="menu-title">MENU</li>
 
-    <div class="vertical-menu mm-active">
-      <div data-simplebar class="h-100 mm-show">
-        <div class="simplebar-wrapper" style="margin: 0px;">
-          <div class="simplebar-height-auto-observer-wrapper">
-            <div class="simplebar-height-auto-observer"></div>
-          </div>  
-          <div class="simplebar-mask">
-            <div class="simplebar-offset" style="right: -17px; bottom: 0px;">
-              <div class="simplebar-content-wrapper" style="height: 100%; overflow: hidden;">
-                <div class="simplebar-content" style="padding: 0px;">
+        <li class="nav-list-item">
+          <a href="dashboard.html">
+            <i class="ico-dashboard-light appIcon"></i>
+            <span class="side-nav-link">Dashboard</span>
+            <span class="badge rounded-pill bg-success float-end">3</span>
+          </a>
+        </li>
 
-                  <!--- Sidemenu -->
-                  <a class="sidebar-nav-icons"  onclick="scrollAbove()" href="#"><img src="../_res/_icons/up-light.svg" class="" alt="sidebar-top"></a>
+        <li class="nav-list-item">
+          <a href="dashboard.html">
+            <i class="ico-chat appIcon"></i>
+            <span class="side-nav-link">Calender</span>
+            <span class="badge rounded-pill bg-success float-end">3</span>
+          </a>
+        </li>
 
-                  <div id="sidebar-menu" class="mm-active">
+        <li class="nav-list-item">
+          <a href="dashboard.html">
+            <i class="ico-chat appIcon"></i>
+            <span class="side-nav-link">Chat</span>
+            <span class="badge rounded-pill bg-success float-end">3</span>
+          </a>
+        </li>
 
-                    <!-- Left Menu Start -->
-                    <ul class="metismenu list-unstyled mm-show">
-
-                      <li class="menu-title">Menu</li>
-                      <li  class="nav-list-item mm-active">
-                        <a href="dashboard.html" class="waves-effect">
-                          <span class="badge rounded-pill bg-success float-end">3</span>
-                          <i class="ico-dashboard-light appIcon"></i>
-                          <span class="side-nav-link">Dashboard</span>
-                        </a>
-                      </li>
-
-
-
-                      <li class="nav-list-item">
-                        <a href="dashboard.html" class="waves-effect">
-                          <span class="badge rounded-pill bg-success float-end">3</span>
-                          <i class="ico-dashboard-light appIcon"></i>
-                          <span class="side-nav-link">Dashboard</span>
-                        </a>
-                      </li>
-
-
-                      <li class="nav-list-item">
-                        <a href="dashboard.html" class="waves-effect">
-                          <span class="badge rounded-pill bg-success float-end">3</span>
-                          <i class="ico-dashboard-light appIcon"></i>
-                          <span class="side-nav-link">Dashboard</span>
-                        </a>
-                      </li>
-
-
-                      <li class="nav-list-item">
-                        <a href="dashboard.html" class="waves-effect">
-                          <span class="badge rounded-pill bg-success float-end">3</span>
-                          <i class="ico-dashboard-light appIcon"></i>
-                          <span class="side-nav-link">Dashboard</span>
-                        </a>
-                      </li>
-
-
-                      <li class="nav-list-item">
-                        <a href="dashboard.html" class="waves-effect">
-                          <span class="badge rounded-pill bg-success float-end">3</span>
-                          <i class="ico-dashboard-light appIcon"></i>
-                          <span class="side-nav-link">Dashboard</span>
-                        </a>
-                      </li>
-                      
-                      <li class="nav-list-item">
-                        <a href="calendar.html" class=" waves-effect">
-                          <i class="ico-calender appIcon"></i>
-                          <span class="side-nav-link">Calendar</span>
-                        </a>
-                      </li>
-
-                      <li class="nav-list-item">
-                        <a href="chat.html" class=" waves-effect">
-                          <i class="ico-chat appIcon"></i>
-                          <span class="side-nav-link">Chat</span>
-                        </a>
-                      </li>
-
-                      <li class="nav-list-item">
-                        <a href="chat.html" class=" waves-effect">
-                          <i class="ico-view-kanban appIcon"></i>
-                          <span class="side-nav-link">Task Board</span>
-                        </a>
-                      </li>
-
-                      <li class="nav-list-item">
-                        <a href="javascript: void(0);" class="has-arrow waves-effect" aria-expanded="false">
-                          <i class="ico-barchart-light appIcon"></i>
-                          <span class="side-nav-link">Charts</span>
-                          <span class="ico-down-arrow navIcon"></span>
-                       
-                        </a>
-                        <ul class="sub-menu mm-collapse" aria-expanded="false" style="">
-                          <li><a href="charts-apex.html" class="active">Apex Charts</a></li>
-                          <li><a href="charts-chartjs.html">Chartjs Charts</a></li>
-                          <li><a href="charts-flot.html">Flot Charts</a></li>
-                          <li><a href="charts-knob.html">Jquery Knob Charts</a></li>
-                          <li><a href="charts-sparkline.html">Sparkline Charts</a></li>
-                        </ul>
-                      </li>
-
-
-                      <li class="nav-list-item">
-                        <a href="javascript: void(0);" class="has-arrow waves-effect" aria-expanded="false">
-                          <i class="ico-barchart-light appIcon"></i>
-                          <span class="side-nav-link">Analytics</span>
-                          <span class="ico-down-arrow navIcon"></span>
-
-                        </a>
-                        <ul class="sub-menu mm-collapse" aria-expanded="false" style="">
-                          <li><a href="charts-apex.html" class="active">Apex Charts</a></li>
-                          <li><a href="charts-chartjs.html">Chartjs Charts</a></li>
-                          <li><a href="charts-flot.html">Flot Charts</a></li>
-                          <li><a href="charts-knob.html">Jquery Knob Charts</a></li>
-                          <li><a href="charts-sparkline.html">Sparkline Charts</a></li>
-                        </ul>
-                      </li>
-
-                      <!-- <li class="">
-                        <a href="javascript: void(0);" class="has-arrow waves-effect mm-active" aria-expanded="false">
-                            <i class="ri-bar-chart-line"></i>
-                            <span>Charts</span>
-                        </a>
-                        <ul class="sub-menu mm-collapse" aria-expanded="false" style="height: 0px;">
-                            <li class="mm-active"><a href="charts-apex.html" class="active">Apex Charts</a></li>
-                            <li><a href="charts-chartjs.html">Chartjs Charts</a></li>
-                            <li><a href="charts-flot.html">Flot Charts</a></li>
-                            <li><a href="charts-knob.html">Jquery Knob Charts</a></li>
-                            <li><a href="charts-sparkline.html">Sparkline Charts</a></li>
-                        </ul>
-                    </li> -->
-
-                    </ul>
-
-                    <ul class="metismenu list-unstyled mm-show">
-                      <li class="menu-title">Pages</li>
-                      <li class="nav-list-item">
-                        <a href="dashboard.html" class="waves-effect">
-                          <span class="badge rounded-pill bg-danger float-end">3</span>
-                          <i class="ico-barchart-light appIcon"></i>
-                          <span>UI ELements</span>
-                        </a>
-                      </li>
-
-
-                      <li class="nav-list-item">
-                        <a href="javascript: void(0);" class="has-arrow waves-effect" aria-expanded="false">
-                          <i class="ico-barchart-light appIcon"></i>
-                          <span class="side-nav-link">Forms</span>
-                          <span class="ico-down-arrow navIcon"></span>
-
-                        </a>
-                        <ul class="sub-menu mm-collapse" aria-expanded="false" style="">
-                          <li><a href="charts-apex.html" class="active">Apex Charts</a></li>
-                          <li><a href="charts-chartjs.html">Chartjs Charts</a></li>
-                          <li><a href="charts-flot.html">Flot Charts</a></li>
-                          <li><a href="charts-knob.html">Jquery Knob Charts</a></li>
-                          <li><a href="charts-sparkline.html">Sparkline Charts</a></li>
-                        </ul>
-                      </li>
-
-
-
-                      <!-- <li class="">
-                        <a href="javascript: void(0);" class="has-arrow waves-effect mm-active" aria-expanded="false">
-                            <i class="ri-bar-chart-line"></i>
-                            <span>Charts</span>
-                        </a>
-                        <ul class="sub-menu mm-collapse" aria-expanded="false" style="height: 0px;">
-                            <li class="mm-active"><a href="charts-apex.html" class="active">Apex Charts</a></li>
-                            <li><a href="charts-chartjs.html">Chartjs Charts</a></li>
-                            <li><a href="charts-flot.html">Flot Charts</a></li>
-                            <li><a href="charts-knob.html">Jquery Knob Charts</a></li>
-                            <li><a href="charts-sparkline.html">Sparkline Charts</a></li>
-                        </ul>
-                    </li> -->
-
-                    </ul>
-                  </div>
-                  <a class="sidebar-nav-icons" onclick="scrollBelow()" href="#"><img src="../_res/_icons/down-light.svg " class="" alt="sidebar-down"></a>
-
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="simplebar-placeholder" style="width: auto; height: 920px;"></div>
-        </div>
         
-      </div>
+
+        <li class="nav-list-item">
+          <a href="dashboard.html">
+            <i class="ico-view-kanban appIcon"></i>
+            <span class="side-nav-link">Task Board</span>
+            <span class="badge rounded-pill bg-success float-end">3</span>
+          </a>
+        </li>
+
+        <li class="nav-list-item">
+          <a  href="javascript: void(0);" class="has-arrow">
+            <i class="ico-barchart-light appIcon"></i>
+            <span class="side-nav-link">Charts     
+              <span class="ico-down-arrow navIcon"></span>
+          </span>
+       
+          </a>
+          <ul class="sub-menu mm-collapse" aria-expanded="false" style="">
+            <li><a href="charts-apex.html" class="active">Apex Charts</a></li>
+            <li><a href="charts-chartjs.html">Chartjs Charts</a></li>
+            <li><a href="charts-flot.html">Flot Charts</a></li>
+            <li><a href="charts-knob.html">Jquery Knob Charts</a></li>
+            <li><a href="charts-sparkline.html">Sparkline Charts</a></li>
+          </ul>
+   
+        </li>
+        <li class="nav-list-item">
+          <a  href="javascript: void(0);" class="has-arrow" aria-expanded="false">
+            <i class="ico-barchart-light appIcon"></i>
+            <span class="side-nav-link">Analytics    
+            <span class="ico-down-arrow navIcon"></span>
+          </span>
+       
+          </a>
+
+          <ul class="sub-menu mm-collapse" aria-expanded="false" style="">
+            <li><a href="charts-apex.html" class="active">Apex Charts</a></li>
+            <li><a href="charts-chartjs.html">Chartjs Charts</a></li>
+            <li><a href="charts-flot.html">Flot Charts</a></li>
+            <li><a href="charts-knob.html">Jquery Knob Charts</a></li>
+            <li><a href="charts-sparkline.html">Sparkline Charts</a></li>
+          </ul>
+        </li>
+
+      </ul>
+      <ul class="metismenu list-unstyled">
+        <li class="menu-title">PAGES</li>
+        <li class="nav-list-item">
+          <a href="dashboard.html">
+            <i class="ico-dashboard-light appIcon"></i>
+            <span class="side-nav-link">UI ELements</span>
+            <span class="badge rounded-pill bg-success float-end">3</span>
+          </a>
+        </li>
+
+    
+        <li class="nav-list-item">
+          <a  href="javascript: void(0);" class="has-arrow">
+            <i class="ico-barchart-light appIcon"></i>
+            <span class="side-nav-link">Forms     
+              <span class="ico-down-arrow navIcon"></span>
+          </span>
+       
+          </a>
+          <ul class="sub-menu mm-collapse" aria-expanded="false" style="">
+            <li><a href="charts-apex.html" class="active">Apex Charts</a></li>
+            <li><a href="charts-chartjs.html">Chartjs Charts</a></li>
+            <li><a href="charts-flot.html">Flot Charts</a></li>
+            <li><a href="charts-knob.html">Jquery Knob Charts</a></li>
+            <li><a href="charts-sparkline.html">Sparkline Charts</a></li>
+          </ul>
+   
+        </li>
+
+
+      </ul>
     </div>
+  
     <div class="main-content">
       <div class="page-content">
         <div class="container-fluid">
@@ -300,6 +241,7 @@
 
             </div>
           </div>
+          <!--  -->
           <div class="row">
             <div class="col-xl-8">
               <div class="row">
@@ -433,29 +375,332 @@
                 <div class="card">
                   <div class="card-body">
 
-                    <h4 class="card-title mb-4">Sales Analytics</h4>
+                    <h4 class="card-title mb-4">Sales Tracks</h4>
                     <div id="chart2">
 
                     </div>
                   </div>
-
-
                 </div>
 
-                <div class="card">
-                  <div class="card-body">
-
-                    <h4 class="card-title mb-4">Sales Analytics</h4>
-                    <div id="chart3">
-
-                    </div>
-                  </div>
-
-
-                </div>
+          <div class="card">
+            <div class="card-body">
+              <h4 class="card-title mb-4">Sales Analytics</h4>
+              <div id="donutChart1">
+                
               </div>
             </div>
           </div>
+
+                
+
+              </div>
+            </div>
+          </div>
+
+           <!-- Sources, Recent Activity Feed, Revenue B Location -->
+          <div class="row">
+            <div class="col-lg-4">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="dropdown float-end">
+                            <a href="#" class="dropdown-toggle arrow-none card-drop" data-bs-toggle="dropdown" aria-expanded="false">
+                              <i class="ico-menu-dots appIcon"></i>
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-end">
+                                <!-- item-->
+                                <a href="javascript:void(0);" class="dropdown-item">Sales Report</a>
+                                <!-- item-->
+                                <a href="javascript:void(0);" class="dropdown-item">Export Report</a>
+                                <!-- item-->
+                                <a href="javascript:void(0);" class="dropdown-item">Profit</a>
+                                <!-- item-->
+                                <a href="javascript:void(0);" class="dropdown-item">Action</a>
+                            </div>
+                        </div>
+
+                        <h4 class="card-title mb-3">Sources</h4>
+
+                        <div>
+                            <div class="text-center">
+                                <p class="mb-2">Total sources</p>
+                                <h4>$ 7652</h4>
+                                <div class="text-success">
+                                    <i class="mdi mdi-menu-up font-size-14"> </i>2.2 %
+                                </div>
+                            </div>
+
+                            <div class="table-responsive mt-4">
+                                <table class="table table-hover mb-0 table-centered table-nowrap">
+                                    <tbody>
+                                        <tr>
+                                            <td style="width: 60px;">
+                                                <div class="avatar-xs">
+                                                    <div class="avatar-title rounded-circle bg-light">
+                                                        <img src="assets/images/companies/img-1.png" alt="img-1" height="20">
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            
+                                            <td>
+                                                <h5 class="font-size-14 mb-0">Source 1</h5>
+                                            </td>
+                                            <td><div id="spak-chart1"></div></td>
+                                            <td>
+                                                <p class="text-muted mb-0">$ 2478</p>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <div class="avatar-xs">
+                                                    <div class="avatar-title rounded-circle bg-light">
+                                                        <img src="assets/images/companies/img-2.png" alt="img-2" height="20">
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <h5 class="font-size-14 mb-0">Source 2</h5>
+                                            </td>
+                                            
+                                            <td><div id="spak-chart2"></div></td>
+                                            <td>
+                                                <p class="text-muted mb-0">$ 2625</p>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <div class="avatar-xs">
+                                                    <div class="avatar-title rounded-circle bg-light">
+                                                        <img src="assets/images/companies/img-3.png" alt="img-3" height="20">
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <h5 class="font-size-14 mb-0">Source 3</h5>
+                                            </td>
+                                            <td class="overflow-hidden">
+                                                <div id="spak-chart3"></div>
+                                            </td>
+                                            <td>
+                                                <p class="text-muted mb-0">$ 2856</p>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+
+                            <div class="text-center mt-4">
+                                <a href="#" class="btn btn-primary btn-sm">View more</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="dropdown float-end">
+                            <a href="#" class="dropdown-toggle arrow-none card-drop" data-bs-toggle="dropdown" aria-expanded="false">
+                              <i class="ico-menu-dots appIcon"></i>
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-end">
+                                <!-- item-->
+                                <a href="javascript:void(0);" class="dropdown-item">Sales Report</a>
+                                <!-- item-->
+                                <a href="javascript:void(0);" class="dropdown-item">Export Report</a>
+                                <!-- item-->
+                                <a href="javascript:void(0);" class="dropdown-item">Profit</a>
+                                <!-- item-->
+                                <a href="javascript:void(0);" class="dropdown-item">Action</a>
+                            </div>
+                        </div>
+
+                        <h4 class="card-title mb-4">Recent Activity Feed</h4>
+
+                        <div  style="max-height: 330px;">
+                            <ul class="list-unstyled activity-wid">
+                                <li class="activity-list">
+                                    <div class="activity-icon avatar-xs">
+                                        <span class="avatar-title bg-primary-subtle  text-primary rounded-circle">
+                                            <i class="ico-edit-light appIcon"></i>
+                                        </span>
+                                    </div>
+                                    <div>
+                                        <div>
+                                            <h5 class="font-size-13">28 Apr, 2020 <small class="text-muted">12:07 am</small></h5>
+                                        </div>
+                                        
+                                        <div>
+                                            <p class="text-muted mb-0">Responded to need “Volunteer Activities”</p>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="activity-list">
+                                    <div class="activity-icon avatar-xs">
+                                        <span class="avatar-title bg-primary-subtle  text-primary rounded-circle">
+                                          <i class="ico-edit-light appIcon"></i>
+                                        </span>
+                                    </div>
+                                    <div>
+                                        <div>
+                                            <h5 class="font-size-13">21 Apr, 2020 <small class="text-muted">08:01 pm</small></h5>
+                                        </div>
+                                        
+                                        <div>
+                                            <p class="text-muted mb-0">Added an interest “Volunteer Activities”</p>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="activity-list">
+                                    <div class="activity-icon avatar-xs">
+                                        <span class="avatar-title bg-primary-subtle  text-primary rounded-circle">
+                                          <i class="ico-edit-light appIcon"></i>
+                                        </span>
+                                    </div>
+                                    <div>
+                                        <div>
+                                            <h5 class="font-size-13">17 Apr, 2020 <small class="text-muted">09:23 am</small></h5>
+                                        </div>
+                                        
+                                        <div>
+                                            <p class="text-muted mb-0">Joined the group “Boardsmanship Forum”</p>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="activity-list">
+                                    <div class="activity-icon avatar-xs">
+                                        <span class="avatar-title bg-primary-subtle  text-primary rounded-circle">
+                                          <i class="ico-edit-light appIcon"></i>
+                                        </span>
+                                    </div>
+                                    <div>
+                                        <div>
+                                            <h5 class="font-size-13">11 Apr, 2020 <small class="text-muted">05:10 pm</small></h5>
+                                        </div>
+                                        
+                                        <div>
+                                            <p class="text-muted mb-0">Responded to need “In-Kind Opportunity”</p>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="activity-list">
+                                    <div class="activity-icon avatar-xs">
+                                        <span class="avatar-title bg-primary-subtle  text-primary rounded-circle">
+                                          <i class="ico-edit-light appIcon"></i>
+                                        </span>
+                                    </div>
+                                    <div>
+                                        <div>
+                                            <h5 class="font-size-13">07 Apr, 2020 <small class="text-muted">12:47 pm</small></h5>
+                                        </div>
+                                        
+                                        <div>
+                                            <p class="text-muted mb-0">Created need “Volunteer Activities”</p>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="activity-list">
+                                    <div class="activity-icon avatar-xs">
+                                        <span class="avatar-title bg-primary-subtle  text-primary rounded-circle">
+                                          <i class="ico-edit-light appIcon"></i>
+                                        </span>
+                                    </div>
+                                    <div>
+                                        <div>
+                                            <h5 class="font-size-13">05 Apr, 2020 <small class="text-muted">03:09 pm</small></h5>
+                                        </div>
+                                        
+                                        <div>
+                                            <p class="text-muted mb-0">Attending the event “Some New Event”</p>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="activity-list">
+                                    <div class="activity-icon avatar-xs">
+                                        <span class="avatar-title bg-primary-subtle  text-primary rounded-circle">
+                                          <i class="ico-edit-light appIcon"></i>
+                                        </span>
+                                    </div>
+                                    <div>
+                                        <div>
+                                            <h5 class="font-size-13">02 Apr, 2020 <small class="text-muted">12:07 am</small></h5>
+                                        </div>
+                                        
+                                        <div>
+                                            <p class="text-muted mb-0">Responded to need “In-Kind Opportunity”</p>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="dropdown float-end">
+                            <a href="#" class="dropdown-toggle arrow-none card-drop" data-bs-toggle="dropdown" aria-expanded="false">
+                              <i class="ico-menu-dots appIcon"></i>
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-end">
+                                <!-- item-->
+                                <a href="javascript:void(0);" class="dropdown-item">Sales Report</a>
+                                <!-- item-->
+                                <a href="javascript:void(0);" class="dropdown-item">Export Report</a>
+                                <!-- item-->
+                                <a href="javascript:void(0);" class="dropdown-item">Profit</a>
+                                <!-- item-->
+                                <a href="javascript:void(0);" class="dropdown-item">Action</a>
+                            </div>
+                        </div>
+
+                        <h4 class="card-title mb-4">Revenue by Locations</h4>
+
+                        <div id="usa-vectormap" style="height: 196px"></div>
+
+                        <div class="row justify-content-center">
+                            <div class="col-xl-5 col-md-6">
+                                <div class="mt-2">
+                                    <div class="clearfix py-2">
+                                        <h5 class="float-end font-size-16 m-0">$ 2542</h5>
+                                        <p class="text-muted mb-0 text-truncate">California :</p>
+                                        
+                                    </div>
+                                    <div class="clearfix py-2">
+                                        <h5 class="float-end font-size-16 m-0">$ 2245</h5>
+                                        <p class="text-muted mb-0 text-truncate">Nevada :</p>
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-5 offset-xl-1 col-md-6">
+                                <div class="mt-2">
+                                    <div class="clearfix py-2">
+                                        <h5 class="float-end font-size-16 m-0">$ 2156</h5>
+                                        <p class="text-muted mb-0 text-truncate">Montana :</p>
+                                        
+                                    </div>
+                                    <div class="clearfix py-2">
+                                        <h5 class="float-end font-size-16 m-0">$ 1845</h5>
+                                        <p class="text-muted mb-0 text-truncate">Texas :</p>
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="text-center mt-4">
+                            <a href="#" class="btn btn-primary btn-sm">Learn more</a>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+          </div>
+   
+         
+      
+        
+     
         <!-- ---------- -->
 
         </div>

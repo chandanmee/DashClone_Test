@@ -34,14 +34,41 @@ if(ulElement){
 
 // dropdown-event
 document.addEventListener("DOMContentLoaded", function() {
-var dropDownElements = document.querySelectorAll('#dropdown-event-2');
-dropDownElements.forEach(function(btn){
-btn.addEventListener('click', function(){
-  var dropdownMenu = this.nextElementSibling;
-  dropdownMenu.classList.toggle('d-none');
+  var dropDownElements = document.querySelectorAll('#dropdown-event-2');
+
+  dropDownElements.forEach(function(btn){
+    btn.addEventListener('click', function(){
+      var dropDownMenu = this.nextElementSibling;
+      dropDownMenu.classList.toggle('d-none');
+    });
+
+    window.addEventListener('click',function(event){
+      if (!btn.contains(event.target)) {
+        var dropDownMenu = btn.nextElementSibling;
+        dropDownMenu.classList.add('d-none');
+      }
+    });
+  });
 });
-});
-});
+
+
+
+// document.addEventListener('DOMContentLoaded', function() {
+//   var dropdownToggle = document.getElementById('dropdown-event-2');
+//   var dropdownMenu = document.getElementById('dropdown-event-profile-menu');
+
+//   dropdownToggle.addEventListener('click', function() {
+//     dropdownMenu.classList.toggle('d-none');
+//   });
+
+//   window.addEventListener('click', function(event) {
+//     if (!event.target.matches('.dropdown-toggle')) {
+//       if (dropdownMenu.classList.contains('show')) {
+//         dropdownMenu.classList.remove('show');
+//       }
+//     }
+//   });
+// });
 
 // sidebar-event-toggle
 document.addEventListener("DOMContentLoaded", function(){
@@ -65,22 +92,22 @@ function scrollAbove() {
 });
 
 // hide sidebar-nav-icons Belove and Above icons
-document.addEventListener("DOMContentLoaded", function() {
-  var ulElement = document.querySelector(".metismenu");
-  var liElements = ulElement.querySelectorAll(".nav-list-item");
+// document.addEventListener("DOMContentLoaded", function() {
+//   var ulElement = document.querySelector(".metismenu");
+//   var liElements = ulElement.querySelectorAll(".nav-list-item");
 // Select the icon element for scrolling up
-var upIcon = document.querySelector(".sidebar-nav-icons[href='#'][alt='sidebar-top']");
+// var upIcon = document.querySelector(".sidebar-nav-icons[href='#'][alt='sidebar-top']");
 
 // Select the icon element for scrolling down
-var downIcon = document.querySelector(".sidebar-nav-icons[href='#'][alt='sidebar-down']");
+// var downIcon = document.querySelector(".sidebar-nav-icons[href='#'][alt='sidebar-down']");
 
-console.log(liElements.length);
+// console.log(liElements.length);
 
-  if (liElements.length <= 12) {
-      upIcon.style.display = "none";
-      downIcon.style.display = "none";
-  }
-});
+//   if (liElements.length <= 12) {
+//       upIcon.style.display = "none";
+//       downIcon.style.display = "none";
+//   }
+// });
 
 
 // carousel 
