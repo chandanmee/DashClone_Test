@@ -482,7 +482,7 @@ body[data-sidebar=dark] .mm-active>a {
 
 .navbar-brand-box {
     padding: 0 1.5rem;
-    width: 240px;
+    width: 210px;
 }
 
 .navbar-brand-box .logo .logo-lg img{
@@ -577,7 +577,7 @@ body[data-sidebar=dark] .mm-active>a {
 
 /* main content */
 .main-content {
-    margin-left: 240px;
+    margin-left: 210px;
     overflow: hidden;
 }
 .main-content .content {
@@ -787,7 +787,7 @@ body[data-sidebar=dark] .mm-active>a {
 .footer {
     padding:15px calc(1.5rem / 2);
     position:fixed;
-    left: 240px;
+    left: 210px;
     right: 0;
     bottom: 0;
     color: #74788d;
@@ -834,7 +834,11 @@ display: flex;
 justify-content: center;
 margin-top:20%;
   }
+  .login-wrapper .login-form-container .login-form .userInfoStatus{
 
+    margin-bottom:0.5rem;
+    color: var(--theme-secondary);
+  }
   .login-wrapper .login-form-container form{
 
   }

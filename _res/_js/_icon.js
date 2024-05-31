@@ -112,6 +112,31 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 
+//menu.svg
+document.addEventListener('DOMContentLoaded', function() {
+    const menuIcons = document.querySelectorAll('.ico-menu-dots');
+    menuIcons.forEach(icon => loadSVG(`../_res/_icons/menu-dots.svg`, icon));
+});
+
+//menu-light.svg
+document.addEventListener('DOMContentLoaded', function() {
+    const menuIcons = document.querySelectorAll('.ico-menu-dots-light');
+    menuIcons.forEach(icon => loadSVG(`../_res/_icons/menu-dots-light.svg`, icon));
+});
+
+
+//edit.svg
+document.addEventListener('DOMContentLoaded', function() {
+    const menuIcons = document.querySelectorAll('.ico-edit');
+    menuIcons.forEach(icon => loadSVG(`../_res/_icons/edit.svg`, icon));
+});
+
+//edit-light.svg
+document.addEventListener('DOMContentLoaded', function() {
+    const menuIcons = document.querySelectorAll('.ico-edit-light');
+    menuIcons.forEach(icon => loadSVG(`../_res/_icons/edit-light.svg`, icon));
+});
+
 
 
 

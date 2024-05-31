@@ -156,3 +156,123 @@ var chart3 = {
 
   var chart = new ApexCharts(document.querySelector("#chart3"), chart3);
   chart.render();
+
+
+
+  // donut chart
+  var donutChart1 = {
+    series: [42, 26, 32], // Percentage values for Product A, B, and C
+    chart: {
+        type: 'donut',
+        height: 222
+    },
+    labels: ['Product A', 'Product B', 'Product C'],
+    colors: ['#008FFB', '#00E396', '#FEB019'],
+    legend: {
+        show: false
+    },
+    responsive: [{
+        breakpoint: 480,
+        options: {
+            chart: {
+                width: 200
+            },
+            legend: {
+                show: false
+            }
+        }
+    }]
+};
+
+// Render the chart
+var chart = new ApexCharts(document.querySelector("#donutChart1"), donutChart1);
+chart.render();
+
+
+
+// spak-chart1
+
+var spakChart1 = {
+  series: [{ data: [24, 62, 42, 84, 63, 25, 44, 46, 54, 28, 54] }],
+  chart: {
+    type: "line",
+    width: 80,
+    height: 35,
+    sparkline: { enabled: !0 },
+  },
+  stroke: { width: [3], curve: "smooth" },
+  colors: ["#5664d2"],
+  tooltip: {
+    fixed: { enabled: !1 },
+    x: { show: !1 },
+    y: {
+      title: {
+        formatter: function (e) {
+          return "";
+        },
+      },
+    },
+    marker: { show: !1 },
+  },
+};
+// Render the chart
+var chart = new ApexCharts(document.querySelector("#spak-chart1"), spakChart1);
+chart.render();
+
+
+// spak-chart2
+var spakChart2 = {
+  series: [{ data: [21, 15, 33, 54, 38, 28, 40, 18, 49, 12, 4] }],
+  chart: {
+    type: "line",
+    width: 80,
+    height: 35,
+    sparkline: { enabled: !0 },
+  },
+  stroke: { width: [3], curve: "smooth" },
+  colors: ["#5664d2"],
+  tooltip: {
+    fixed: { enabled: !1 },
+    x: { show: !1 },
+    y: {
+      title: {
+        formatter: function (e) {
+          return "";
+        },
+      },
+    },
+    marker: { show: !1 },
+  },
+};
+// Render the chart
+var chart = new ApexCharts(document.querySelector("#spak-chart2"), spakChart2);
+chart.render();
+
+
+// spak-chart2
+var spakChart3 = {
+  series: [{ data: [24, 62, 42, 84, 63, 25, 44, 46, 54, 28, 54] }],
+  chart: {
+    type: "line",
+    width: 80,
+    height: 35,
+    sparkline: { enabled: !0 },
+  },
+  stroke: { width: [3], curve: "smooth" },
+  colors: ["#5664d2"],
+  tooltip: {
+    fixed: { enabled: !1 },
+    x: { show: !1 },
+    y: {
+      title: {
+        formatter: function (e) {
+          return "";
+        },
+      },
+    },
+    marker: { show: !1 },
+  },
+};
+// Render the chart
+var chart = new ApexCharts(document.querySelector("#spak-chart3"), spakChart3);
+chart.render();
